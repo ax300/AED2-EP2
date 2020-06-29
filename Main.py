@@ -1,15 +1,13 @@
-from Person import Person
 import json
 
 population = {}
-person_index = []
 
-def add_person(v_ori, v_dest):
+def add_person(v_ori, v_dest): #cria o lista de adjacencia 
     global population
 
-    if v_ori in population:
+    if v_ori in population: #se o no ja existe
         population[v_ori].append(v_dest)
-    else:
+    else: #se o no eh novo
         population[v_ori] = [v_dest]
 
 if __name__ == "__main__":
